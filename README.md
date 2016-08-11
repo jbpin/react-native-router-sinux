@@ -36,7 +36,7 @@ render() {
 
 Now we have our NavigationRoot setted we want to be able to navigate between views. For that we use `navigationStore`
 
-`navigationStore` is a store writen in [Sinux](jbpin/sinux) that duplicate the behavior of `ExperimentalNavigation` helper `NavigationStateUtils`.
+`navigationStore` is a store writen in [Sinux](https://github.com/jbpin/sinux) that duplicate the behavior of `ExperimentalNavigation` helper `NavigationStateUtils`.
 
 Method available in `NavigationStateUtils` are accessible through `navigationStore`.
 
