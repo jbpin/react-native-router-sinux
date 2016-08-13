@@ -87,7 +87,7 @@ module.exports =
 
 	var navigationStore = new (Function.prototype.bind.apply(_sinux.Store, [null].concat([{ index: 0, key: 'App', routes: [] }], _toConsumableArray(Object.keys(NavigationStateUtils)))))();
 
-	for (method in NavigationStateUtils) {
+	for (var method in NavigationStateUtils) {
 	  new _sinux.Command(navigationStore[method], NavigationStateUtils[method]);
 	}
 
