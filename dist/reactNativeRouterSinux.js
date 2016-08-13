@@ -50,6 +50,7 @@ module.exports =
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
+	exports.NavigationRoot = exports.navigationStore = undefined;
 
 	var _navigationStore = __webpack_require__(1);
 
@@ -61,10 +62,8 @@ module.exports =
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	exports.default = {
-	  navigationStore: _navigationStore2.default,
-	  NavigationRoot: _NavigationRoot2.default
-	};
+	exports.navigationStore = _navigationStore2.default;
+	exports.NavigationRoot = _NavigationRoot2.default;
 
 /***/ },
 /* 1 */
@@ -193,7 +192,6 @@ module.exports =
 	      if (!element) {
 	        throw new Error('element for key ' + props.scene.route.key + ' not found', props);
 	      }
-	      element.props = _extends({}, props, element.props);
 	      return element;
 	    }
 	  }, {
