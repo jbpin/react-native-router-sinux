@@ -85,7 +85,7 @@ module.exports =
 	var NavigationStateUtils = _reactNative.NavigationExperimental.StateUtils;
 
 
-	var navigationStore = new (Function.prototype.bind.apply(_sinux.Store, [null].concat([{ index: 0, key: 'App', routes: [] }], _toConsumableArray(Object.keys(NavigationStateUtils).concat(['main'])))))();
+	var navigationStore = new (Function.prototype.bind.apply(_sinux.Store, [null].concat([{ index: 0, key: 'App', routes: [] }], _toConsumableArray(Object.keys(NavigationStateUtils)))))();
 
 	for (method in NavigationStateUtils) {
 	  new _sinux.Command(navigationStore[method], NavigationStateUtils[method]);
@@ -174,9 +174,9 @@ module.exports =
 	    value: function initNavigation(props) {
 	      var _this2 = this;
 
-	      _react.Children.map(props.children, function (c) {
-	        if (c.props.routeKey) {
-	          _this2.scenes[c.props.routeKey] = c;
+	      _react.Children.map(props.children, function (element) {
+	        if (element.props.routeKey) {
+	          _this2.scenes[element.props.routeKey] = element;
 	        }
 	      });
 	      var initial = null;
@@ -189,12 +189,12 @@ module.exports =
 	  }, {
 	    key: 'renderScene',
 	    value: function renderScene(props) {
-	      var component = this.scenes[props.scene.route.key];
-	      if (!component) {
-	        throw new Error('component for key ' + props.scene.route.key + ' not found', props);
+	      var element = this.scenes[props.scene.route.key];
+	      if (!element) {
+	        throw new Error('element for key ' + props.scene.route.key + ' not found', props);
 	      }
-	      component.props = _extends({}, props, component.props);
-	      return component;
+	      element.props = _extends({}, props, element.props);
+	      return element;
 	    }
 	  }, {
 	    key: 'render',
@@ -214,9 +214,6 @@ module.exports =
 	}(_react.Component);
 
 	exports.default = NavigationRoot;
-
-
-	NavigationRoot.propTypes = { children: _react2.default.PropTypes.node };
 
 /***/ },
 /* 5 */
