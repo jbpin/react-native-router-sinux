@@ -1,6 +1,6 @@
 {
   "name": "react-native-router-sinux",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Simple wrapper to use React Native Experimental Navigation ",
   "main": "dist/reactNativeRouterSinux.js",
   "scripts": {
